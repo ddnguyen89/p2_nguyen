@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { MyComponent } from '../../components/foo';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-order',
   templateUrl: 'order.html'
 })
 export class OrderPage {
 
-  constructor(public navCtrl: NavController) {
+  username: string;
 
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.username = navParams.get("data");
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad OrderPage');
   }
 }

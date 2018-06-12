@@ -16,7 +16,7 @@
 <ion-content padding>
   <ion-list>
     <ion-item >
-      <ion-input type="text" placeholder="Username"></ion-input>
+      <ion-input placeholder="Username" #username></ion-input>
     </ion-item>
     
     <ion-item>
@@ -25,5 +25,5 @@
     
   </ion-list>
     
-  <button ion-button color="secondary" round (click)="onOrder()">LOGIN</button>
+  <button ion-button color="secondary" round (click)="onOrder(username.value)">LOGIN</button>
 </ion-content>

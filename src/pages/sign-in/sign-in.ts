@@ -23,8 +23,10 @@ export class SignInPage {
     console.log('ionViewDidLoad SignInPage');
   }
 
-  onOrder() {
-    this.navCtrl.push(OrderPage);
+  onOrder(username) {
+    username = username || "";
+
+    this.navCtrl.push(OrderPage, {data: username});
   }
 
 }
